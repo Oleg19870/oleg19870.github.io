@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width">
+  <meta name="keywords" content="сделать сайт, заказать сайт, сайт-визитка, создание сайта, разработка сайта, стоимость сайта, веб-студия, Сосновоборск, Красноярск, Железногорск" />
+  <meta name="description" content="Хотите свой сайт? Обращайтесь к нам! Сделаем недорого! Регионы: Сосновоборск, Красноярск, Железногорск. Тел. 8-950-424-49-69">
+  <title>Orbita-web.ru :: Создание и разработка сайтов в Сосновоборске</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles/style1.css" type="text/css" media="screen" />
+  <link href="styles/lightbox.css" rel="stylesheet">
+  <script src='js/jquery-1.11.0.min.js'></script>
+  <script src='js/lightbox.min.js'></script>
+<script type="text/javascript">
+  function validateEmail(email) { 
+    var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return reg.test(email);
+  }
+
+  $(document).ready(function() {
+    $("#contact").submit(function() { return false; });
+    $("#send").on("click", function(){
+      var emailval  = $("#email").val();
+      var namevl  = $("#name").val();
+      var phonevl  = $("#phone").val();
+      var msgval    = $("#msg").val();
+      var msglen    = msgval.length;
+      var mailvalid = validateEmail(emailval);
+
+      if(mailvalid == false) {
+        $("#email").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#email").removeClass("error");
+      }
+  if(mailvalid == false) {
+        $("#name").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#name").removeClass("error");
+      }
+      if(mailvalid == false) {
+        $("#phone").addClass("error");
+      }
+      else if(mailvalid == true){
+        $("#phone").removeClass("error");
+      }
+      if(msglen < 4) {
+        $("#msg").addClass("error");
+      }
+      else if(msglen >= 4){
+        $("#msg").removeClass("error");
+      }
+      
+      if(mailvalid == true && msglen >= 4) {
+        // если обе проверки пройдены
+        // сначала мы скрываем кнопку отправки
+        $("#send").replaceWith("<br /><img src='images/icons/load.gif' border='0'><br /><br />");
+        $.ajax({
+          type: 'POST',
+          url: 'https://orbita-web.ru/sendmessage.php',
+          data: $("#contact").serialize(),
+          success: function(data) {
+            if(data == "true") {
+              $("#contact").fadeOut("fast", function(){
+                $(this).before("<p><strong>Ваше сообщение успешно отправлено &emsp;<img src='images/icons/ok.png' border='0' align='middle'></strong></p>");
+                setTimeout("$.fancybox.close()", 1000);
+              });
+            }
+          }
+        });
+      }
+    });
+  });
+</script>
+ </head>
+<body>
+<div class='razm'>
+<a href='https://orbita-web.ru'><img src='https://orbita-web.ru/images/orbita.png' border='0' class='logo'></a>
+<!-- <img src='https://orbita-web.ru/images/tel.png' border='0' class='tel'> -->
+
+</p>Приветствуем Вас!</p>
+
+<p>
+Вы хотите создать свою сайт-визитку с рекламой Вашего дела,
+иметь личный блог для записей, интернет-магазин для продажи товаров, портал на тему, которая
+Вас интересует, форум для обсуждения, - но не можете этого сделать сами и не знаете к кому обратиться,
+то возможно мы можем помочь Вам!
+</p>
+<p>
+Ниже приведён список некоторых из проделанных работ. 
+На сайт можно подобрать цвет и дизайн, который Вам нравится, а также добавить нужные функции.
+Стоимость от 5000₽. Сроки выполнения работ зависят от сложности построения сайта.
+После окончания работы над сайтом ресурс добавляется в поисковые
+сервисы, такие как Яндекс и Google.
+</p>
+<p>
+Для того, чтобы сделать заказ по созданию сайта,
+звоните по телефону 8-950-424-49-69 или нажмите <a href='#cont'>&laquo;Обратная связь&raquo;</a>
+для того, чтобы написать нам на Е-майл.
+</p>
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js"></script>
+<p><div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,viber,whatsapp,telegram"></div></p>
+<hr class='hr'>
+
+<p>
+<a href='images/work/annko.jpg' rel='lightbox[roadtrip]' title='АНО &laquo;Возрождение&raquo;'><img src='images/work/annko_p.jpg' class='rightimg'></a>
+Сайт <a href='https://annko.ru' target='_blank'>АНО <q>Возрождение</q></a> оформлен в мягких зелёных тонах на белом фоне. Выглядит просто и приятно. Ничего лишнего. Сайт адаприрован под все веб-устройства. При узкой ширине экрана навигация становится столбиком, что удобно для обзора с телефона.
+</p>
+<p>
+<a href='images/work/gallant.jpg' rel='lightbox[roadtrip]' title='Строительная компания &laquo;GALLANT&raquo;'><img src='images/work/gallant_p.jpg' class='rightimg'></a>
+Сайт <a href='http://gallant.su' target='_blank'>Строительная компания <q>GALLANT</q></a> оформлен в тёмно-синих тонах. На главной странице каждые 5 секунд меняется изображение по теме сайта. Слева качающаяся трубка телефона с формой для отправки SMS-сообщения владельцу компании. Остальная часть сайта состоит в основном из фотогалереи.
+</p>
+<p>
+<a href='images/work/chistyulya.jpg' rel='lightbox[roadtrip]' title='Агентство чистоты &laquo;Чистюля&raquo;'><img src='images/work/chistyulya_p.jpg' class='rightimg'></a>
+Сайт <a href='https://агентство-чистоты.рф' target='_blank'>Агентство чистоты <q>Чистюля</q></a> оформлен в светлый фон с элементыми салатового и зелёного цвета. Простой сайт-визитка с картинками и текстом. Встроена навигация со ссылками на страницы.
+</p>
+<p>
+<a href='images/work/renessanse.jpg' rel='lightbox[roadtrip]' title='Арт-Дизайн Студия &laquo;Ренессанс&raquo;'><img src='images/work/renessanse_p.jpg' class='rightimg'></a>
+Сайт Арт-Дизайн Студия <q>Ренессанс</q> выполнен в стиле Aero от операционной системы Windows Vista. Фон и градиент хорошо сочетаются с контентом. Встроены выпадающее меню и выдвижная панель справа для оформления заказа работ.
+</p>
+<p>
+<a href='images/work/devora.jpg' rel='lightbox[roadtrip]' title='Печатный центр &laquo;DEVORA&raquo;'><img src='images/work/devora_p.jpg' class='rightimg'></a>
+Сайт <a href='http://devora-print.ru' target='_blank'>Печатный центр <q>DEVORA</q></a> оформлен в светло-серый фон. Простой дизайн с меню и изображениями.
+</p>
+<a name='cont'></a><hr class='hr'>
+<div class="inline">
+<p>
+Вы можете написать нам на почту использую форму ниже. Чтобы мы могли Вам ответить, пожалуйста, правильно напишите вашу почту в поле <q>E-mail</q>. Если же хотите, чтобы мы могли с вами связаться по телефону, напишите ваш номер в соответствующее поле.
+</p>
+<form id="contact" action="#" method="post" name="contact">
+<input id="name" class="txt" name="name" type="name" placeholder="Ваше имя" />
+ <input id="phone" class="txt" name="phone" type="phone" placeholder="Ваш телефон" /> 
+<input id="email" class="txt" name="email" type="email" placeholder="Ваш e-mail" /> 
+<textarea id="msg" class="txtarea" name="msg" placeholder="Ваше сообщение:"></textarea>
+ <button id="send">Отправить</button>
+</form>
+</div>
+<hr class='hr'>
+<div align='center' style='font-size:12px'>&copy; Создание и разработка сайтов в Сосновоборске. <a href='https://orbita-web.ru'>Orbita-web.ru</a>, 2018-2019</div><br />
+<div align='center' class='schet'>
+<!--LiveInternet counter--><script type="text/javascript">
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t11.13;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,150))+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31' style='margin:2px 0;'><\/a>")
+</script><!--/LiveInternet-->
+<!--- DO NOT EDIT - GlobalSign SSL Site Seal Code - DO NOT EDIT --->
+<span id="ss_img_wrapper_gmogs_image_90-35_en_black"><a href="https://www.globalsign.com/" target=_blank title="GlobalSign Site Seal" rel="nofollow"><img alt="SSL" border=0 id="ss_img" src="//seal.globalsign.com/SiteSeal/images/gs_noscript_90-35_en.gif"></a></span><script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gmogs_image_90-35_en_black.js"></script>
+<!--- DO NOT EDIT - GlobalSign SSL Site Seal Code - DO NOT EDIT --->
+</div>
+</div>
+</body>
+</html>

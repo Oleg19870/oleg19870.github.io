@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /js/
+Disallow: /styles/
+Disallow: /cgi-sys/
+Host: https://orbita-web.ru
