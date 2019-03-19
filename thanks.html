@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xml:lang="ru" lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Refresh" content="5; URL=https://orbita-web.ru">
+  <title>Orbita-web.ru :: Создание и разработка сайтов в Сосновоборске</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+   body {
+	font-family:Verdana,Tahoma,Arial,Sans-Serif;
+	font-size: 18px;
+		}
+    section {
+	text-align: center;
+        background: #111f3a;
+        color: white;
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+		}
+    .loading {
+	font-size: 18px;
+		}
+    .loading:after {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: bottom;
+	-webkit-animation: ellipsis steps(4,end) 2000ms infinite;      
+	animation: ellipsis steps(4,end) 2000ms infinite;
+	content: "\2026"; /* ascii code for the ellipsis character */
+	width: 0px;
+		}
+     @keyframes ellipsis {
+	to {
+ 	width: 1.25em;    
+	}
+			}
+     @-webkit-keyframes ellipsis {
+	to {
+	width: 1.25em;    
+	}
+			}
+  </style>
+</head>
+<body>
+<section>
+<p>Спасибо!<br />Ваше сообщение успешно отправлено!</p><p>Сейчас Вы будете перенаправлены<br /><span class="loading"></span></p>
+</section>
+</body>
+</html>
