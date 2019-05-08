@@ -1,5 +1,11 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 a {
-	color: #1e8bb4;
+	color:#1e8bb4;
 	text-decoration: none;
 }
 
@@ -21,7 +27,7 @@ a:hover.side {
 a.white, li.white a {
 	color: #DCE0E2;
 	text-decoration: none;
-	font-weight:bold;
+	font-weight: bold;
 }
 
 a:hover.white, li.white a:hover {
@@ -31,38 +37,44 @@ a:hover.white, li.white a:hover {
 
 body {
 	width: 100%;
-	margin: 0 auto;
 	background-image: url(../images/10.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center center;
 	background-size: cover;
 	color: #ffffff;
-	font-family:Verdana,Tahoma,Arial,Sans-Serif;
+	font-family: Verdana, Arial, Sans-Serif;
 	font-size: 16px;
 	quotes: "\00ab" "\00bb";
 }
 
+article {
+	background-color: rgba(13, 24, 40, 0.5); /* #0d1828 */
+	clear: both;
+	padding: 15px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+ul {
+	margin-left: 20px;
+}
+
 .logo {
 	margin: 0 0 15px 0;
-	float:left;
+	float: left;
 }
 
 .tel {
-	margin: 0 0 15px 0;
-	float:right;
+	margin: 15px 0 15px 0;
+	float: right;
 }
 
 .hr {
-	height:0px; 
-	border:solid #2b6571 1px; 
-	width:800px;
-}
-
-.razm {
-	padding: 10px; /* Поля вокруг текста */
-	width: 1000px;
-	margin: 0 auto;
+	height: 0px; 
+	border: solid #2b6571 1px; 
+	width: 800px;
+	margin: 0.5em auto;
 }
 
 .rightimg {
@@ -71,7 +83,8 @@ body {
 }
 
 p {
-	clear:both;
+	clear: both;
+	margin: 1.0em 0;
 }
 
 .ocentrovka {
@@ -82,13 +95,16 @@ p {
 	margin-left: -225px;
 }
 
+.schet {
+	margin: -10px 0 0 0;
+}
+
 @media only screen and (max-width: 1025px) {
-.razm {
+article {
 	width: 670px;
-	margin: 0 auto;
 }
 .hr {
-	width:600px;
+	width: 600px;
 }
 .rightimg {
 	margin: 0 0 15px 15px;
@@ -96,39 +112,43 @@ p {
 					    }
 
 @media only screen and (max-width: 684px) {
-.razm {
-	width: 100%;
+.logo, .tel {
+	float: none;
 	margin: 0 auto;
+	display: block;
+}
+article {
+	width: 100%;
+	padding: 5px;
+}
+ul {
+	margin: 0;
 }
 .hr {
-	width:300px;
+	width: 300px;
 }
 .rightimg {
-	float:none;
+	float: none;
 	display: block;
 	margin: 0 auto 15px;
 }
 					   }
 
-.schet {
-	margin: -10px 0 0 0;
-}
-
-/* Форма обратной связи */
+/* Feedback */
 .inline {
     width: 650px;
     margin: 0 auto;
 
 }
 .txt { 
-    background-color:#e2f6ef;
+    background-color: #e2f6ef;
     display: inline-block;
     color: #676767;
     width: 190px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     padding: 5px 9px;
-    font-size: 15px!important;
+    font-size: 15px !important;
     line-height: 1.4em;
 }
 .txtarea { 
@@ -139,7 +159,7 @@ p {
 	margin-bottom: 10px;
 	border: 1px solid #ccc;
 	padding: 5px 9px;
-	font-size: 15px!important;
+	font-size: 15px !important;
 	line-height: 1.4em;
 	height: 80px;
 }
@@ -186,4 +206,3 @@ input.error:focus, textarea.error:focus {
 #send:hover {
     background: #979797;
 }
-/* Форма обратной связи */
