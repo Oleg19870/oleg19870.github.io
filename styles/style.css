@@ -113,8 +113,11 @@ article {
 
 @media only screen and (max-width: 684px) {
 body {
-	background-image: none;
-	background: #09101d none repeat scroll 0% 0%;
+	background-image: url(../images/mfon.jpg); 
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: 0% 0%;
+	background-size: auto;
 }
 .logo, .tel {
 	float: none;
@@ -122,7 +125,6 @@ body {
 	display: block;
 }
 article {
-	background-color: none;
 	width: 100%;
 	padding: 5px;
 }
