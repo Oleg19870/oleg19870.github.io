@@ -112,12 +112,17 @@ article {
 					    }
 
 @media only screen and (max-width: 684px) {
+body {
+	background-image: none;
+	background-color: #09101d;
+}
 .logo, .tel {
 	float: none;
 	margin: 0 auto;
 	display: block;
 }
 article {
+	background-color: none;
 	width: 100%;
 	padding: 5px;
 }
