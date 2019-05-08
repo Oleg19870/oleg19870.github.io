@@ -114,7 +114,7 @@ article {
 @media only screen and (max-width: 684px) {
 body {
 	background-image: none;
-	background-color: #09101d;
+	background: #09101d none repeat scroll 0% 0%;
 }
 .logo, .tel {
 	float: none;
