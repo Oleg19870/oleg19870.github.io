@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /js/
-Disallow: /styles/
-Disallow: /thanks.php
-Sitemap: https://orbita-web.ru/sitemap.xml
-Host: https://orbita-web.ru
