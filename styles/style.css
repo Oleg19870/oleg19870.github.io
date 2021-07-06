@@ -75,6 +75,7 @@ ul {
 	border: solid #2b6571 1px; 
 	width: 800px;
 	margin: 0.5em auto;
+	clear: both;
 }
 
 .rightimg {
