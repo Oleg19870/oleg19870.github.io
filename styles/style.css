@@ -131,6 +131,7 @@ article {
 }
 .hr {
 	width: 300px;
+	clear: none;
 }
 .rightimg {
 	float: none;
